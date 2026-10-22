@@ -1,5 +1,7 @@
 <div align="left">
 
+English | [Bahasa Melayu](README.ms-MY.md)
+
 # GET SHIT DONE for OpenCode. (Based on TÂCHES v1.38.5 - 2026-04-25)
 
 **A light-weight and powerful meta-prompting, context engineering and spec-driven development system for Claude Code by TÂCHES. (Adapted for OpenCode by rokicool and enthusiasts)**
@@ -10,6 +12,38 @@
 [![npm downloads](https://img.shields.io/npm/dm/gsd-opencode?style=for-the-badge&logo=npm&logoColor=white&color=CB3837)](https://www.npmjs.com/package/gsd-opencode)
 [![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/rokicool/gsd-opencode?style=for-the-badge&logo=github&color=181717)](https://github.com/rokicool/gsd-opencode)
+
+---
+
+## Install
+
+```bash
+npx gsd-opencode@latest
+
+# or
+npm install gsd-opencode -g && gsd-opencode install
+
+# or
+bunx gsd-opencode@latest
+```
+
+## ⚠️ After installing: run [`gsd-fix.sh`](./gsd-fix.sh) — required for OpenCode 2.x
+
+Installing or updating via `npx gsd-opencode@latest` (or npm, bun, and others) has two known problems on OpenCode 2.x — **[GSD_FIX.md](./GSD_FIX.md)** documents them in full:
+
+1. **Every `/gsd-*` command looks missing.** The installer puts the 88 command files into a nested `commands/gsd/` folder, which OpenCode 2.0 registers as namespaced `/gsd/gsd-*` commands instead of the flat `/gsd-*` names — even though `gsd-opencode check` reports every file intact.
+2. **`gsd-sdk` is left as a dangling symlink into the ephemeral npx cache.** npx can garbage-collect `~/.npm/_npx/…` at any time, silently breaking the `gsd-sdk query …` calls that every GSD command and agent relies on.
+
+Both are fixed by the idempotent [`gsd-fix.sh`](./gsd-fix.sh) script. Run it once after every install **or** update:
+
+```bash
+bash gsd-fix.sh
+
+# or straight from this repo, without cloning:
+curl -fsSL https://raw.githubusercontent.com/C-Fu/gsd-opencode-fu/main/gsd-fix.sh -o gsd-fix.sh && bash gsd-fix.sh
+```
+
+The script flattens `commands/gsd/` → `commands/`, pins `gsd-sdk` to a real global npm install, and verifies that OpenCode registered the `/gsd-*` commands. See **[GSD_FIX.md](./GSD_FIX.md)** for symptoms, background, and manual repair steps.
 
 ---
 
