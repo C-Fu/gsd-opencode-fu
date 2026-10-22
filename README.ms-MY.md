@@ -18,6 +18,12 @@
 ## Pemasangan
 
 ```bash
+# Belum ada Node.js? Pasang nvm dahulu (npm/npx perlukan Node.js):
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+source ~/.bashrc
+nvm install --lts
+source ~/.bashrc
+
 npx gsd-opencode@latest
 
 # atau

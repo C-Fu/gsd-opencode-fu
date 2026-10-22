@@ -18,6 +18,12 @@ English | [Bahasa Melayu](README.ms-MY.md)
 ## Install
 
 ```bash
+# Node.js not found? Install nvm first (npm/npx need Node.js):
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+source ~/.bashrc
+nvm install --lts
+source ~/.bashrc
+
 npx gsd-opencode@latest
 
 # or
