@@ -47,6 +47,9 @@ bash gsd-fix.sh
 
 # or straight from this repo, without cloning:
 curl -fsSL https://raw.githubusercontent.com/C-Fu/gsd-opencode-fu/main/gsd-fix.sh -o gsd-fix.sh && bash gsd-fix.sh
+
+# or if you're running opencode v1.x.x:
+curl -fsSL https://raw.githubusercontent.com/C-Fu/gsd-opencode-fu/main/gsd-fix.sh -o gsd_pre_v2_fix.sh && bash
 ```
 
 The script flattens `commands/gsd/` → `commands/`, pins `gsd-sdk` to a real global npm install, and verifies that OpenCode registered the `/gsd-*` commands. See **[GSD_FIX.md](./GSD_FIX.md)** for symptoms, background, and manual repair steps.
