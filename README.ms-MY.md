@@ -47,6 +47,9 @@ bash gsd-fix.sh
 
 # atau terus dari repo ini, tanpa perlu klon:
 curl -fsSL https://raw.githubusercontent.com/C-Fu/gsd-opencode-fu/main/gsd-fix.sh -o gsd-fix.sh && bash gsd-fix.sh
+
+# atau kalau pakai opencode v1.x.x:
+curl -fsSL https://raw.githubusercontent.com/C-Fu/gsd-opencode-fu/main/gsd_pre_v2_fix.sh -o gsd_pre_v2_fix.sh && bash
 ```
 
 Skrip ini meratakan `commands/gsd/` → `commands/`, menetapkan `gsd-sdk` kepada pemasangan global npm yang sebenar, dan mengesahkan OpenCode telah mendaftarkan arahan `/gsd-*`. Lihat **[GSD_FIX.md](./GSD_FIX.md)** untuk gejala, latar belakang dan langkah pembaikan manual.
