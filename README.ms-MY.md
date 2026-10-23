@@ -52,7 +52,7 @@ curl -fsSL https://raw.githubusercontent.com/C-Fu/gsd-opencode-fu/main/gsd-fix.s
 curl -fsSL https://raw.githubusercontent.com/C-Fu/gsd-opencode-fu/main/gsd_pre_v2_fix.sh -o gsd_pre_v2_fix.sh && bash
 ```
 
-Skrip ini meratakan `commands/gsd/` → `commands/`, menetapkan `gsd-sdk` kepada pemasangan global npm yang sebenar, dan mengesahkan OpenCode telah mendaftarkan arahan `/gsd-*`. Lihat **[GSD_FIX.md](./GSD_FIX.md)** untuk gejala, latar belakang dan langkah pembaikan manual.
+Skrip ini meratakan `commands/gsd/` → `commands/`, menetapkan `gsd-sdk` kepada pemasangan global npm yang sebenar, dan mengesahkan OpenCode telah mendaftarkan arahan `/gsd-*`. Lihat **[GSD_FIX.md](./GSD_FIX.md)** untuk gejala (dan **[GSD_PRE_V2_FIX.md](./GSD_PRE_V2_FIX.md)**), latar belakang dan langkah pembaikan manual.
 
 ---
 
